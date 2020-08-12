@@ -22,6 +22,8 @@ handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 # 接收 LINE 的資訊
 @app.route("/callback", methods=['POST'])
 def callback():
+
+    app.logger.info("amanda test")
     signature = request.headers['X-Line-Signature']
 
     body = request.get_data(as_text=True)
