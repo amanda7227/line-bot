@@ -43,7 +43,7 @@ def pretty_echo(event):
     if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
 
         # Phoebe 愛唱歌
-        pretty_note = '♫♪♬'
+        pretty_note = '♫♪♬' + event.source.user_id
         pretty_text = ''
 
         for i in event.message.text:
